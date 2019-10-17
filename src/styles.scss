@@ -1,1 +1,50 @@
-/* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+@import './assets/shared-style-classes/shared-sass-properties.scss';
+@import './assets/shared-style-classes/buttons.scss';
+
+@import './assets/color-palettes/main-colors.scss';
+@import './assets/shared-style-classes/font-sizes.scss';
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+}
+
+.page {
+    min-height: 1300px;
+    background-color: $light-medium-grey;
+}
+
+.content {
+    min-height: 50px;
+    background-color: $white;
+}
+
+.spacer {
+    flex: 1 1 auto;
+}
+
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+::-webkit-scrollbar-track {
+    background: $light-medium-grey;
+}
+
+::-webkit-scrollbar-thumb {
+    background: $flag-blue-dark;
+
+    &:hover {
+        background: $flag-blue-lightest;
+    }
+}

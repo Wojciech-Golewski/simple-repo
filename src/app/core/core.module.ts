@@ -1,9 +1,12 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { MainPageComponent } from './components/main-page/main-page.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
+import { SharedModule } from '../shared/shared.module';
+import { RouterModule } from '@angular/router';
+import { AboutUsComponent } from './components/about-us/about-us.component';
+import { ContactComponent } from './components/contact/contact.component';
 
 
 
@@ -12,16 +15,21 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
     HeaderComponent,
     FooterComponent,
     MainPageComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    AboutUsComponent,
+    ContactComponent
   ],
   imports: [
-    CommonModule
+    SharedModule,
+    RouterModule
   ],
   exports: [
     HeaderComponent,
     FooterComponent,
     MainPageComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    AboutUsComponent,
+    ContactComponent
   ]
 })
 export class CoreModule { }

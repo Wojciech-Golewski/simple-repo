@@ -1,0 +1,16 @@
+@import '../../../../assets/shared-style-classes/font-sizes.scss';
+
+#app-title {
+    font-weight: 400;
+    font-size: $main-big-font;
+    margin-left: 50px;
+    outline: none;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.mat-toolbar-row {
+    padding: 0;
+}

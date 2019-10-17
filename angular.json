@@ -47,6 +47,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -80,6 +81,9 @@
                   "maximumError": "10kb"
                 }
               ]
+            },
+            "es5": {
+              "tsConfig": "./tsconfig-es5.app.json"
             }
           }
         },
@@ -91,6 +95,9 @@
           "configurations": {
             "production": {
               "browserTarget": "simple-repo:build:production"
+            },
+            "es5": {
+              "browserTarget": "simple-repo:build:es5"
             }
           }
         },
@@ -112,6 +119,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -143,6 +151,7 @@
           }
         }
       }
-    }},
+    }
+  },
   "defaultProject": "simple-repo"
 }
