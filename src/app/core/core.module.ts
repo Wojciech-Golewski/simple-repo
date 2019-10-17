@@ -27,7 +27,9 @@ import { ContactComponent } from './components/contact/contact.component';
     HeaderComponent,
     FooterComponent,
     MainPageComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    AboutUsComponent,
+    ContactComponent
   ]
 })
 export class CoreModule { }
