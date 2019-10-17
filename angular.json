@@ -81,6 +81,9 @@
                   "maximumError": "10kb"
                 }
               ]
+            },
+            "es5": {
+              "tsConfig": "./tsconfig-es5.app.json"
             }
           }
         },
@@ -92,6 +95,9 @@
           "configurations": {
             "production": {
               "browserTarget": "simple-repo:build:production"
+            },
+            "es5": {
+              "browserTarget": "simple-repo:build:es5"
             }
           }
         },
