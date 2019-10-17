@@ -27,3 +27,23 @@ body {
 .spacer {
     flex: 1 1 auto;
 }
+
+.nav-type-button {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 20px;
+    border-left: 2px solid $light-medium-grey;
+    transition: .2s ease-out;
+
+    &:hover {
+        background-color: $flag-blue-dark;
+        border-left: 2px solid $flag-blue-dark;
+        transition: .2s ease-in;
+        cursor: pointer;
+
+        span {
+            color: $white;
+        }
+    }
+}
