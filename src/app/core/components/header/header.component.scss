@@ -1,7 +1,8 @@
-@import '../../../../assets/color-palettes/main-colors.scss';
+@import '../../../../assets/shared-style-classes/font-sizes.scss';
 
 #app-title {
     font-weight: 500;
+    font-size: $main-big-font;
     margin-left: 50px;
 }
 

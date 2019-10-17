@@ -1,0 +1,16 @@
+@import '../../../../assets/shared-style-classes/shared-sass-properties.scss';
+@import '../../../../assets/shared-style-classes/font-sizes.scss';
+
+.content {
+    height: 100px;
+
+    .footer-fontainer {
+        @include flex-base;
+        height: 100%;
+
+        span {
+            font-size: $smallest-font;
+            font-weight: 300;
+        }
+    }
+}

@@ -1,8 +1,10 @@
 @import '~bootstrap/dist/css/bootstrap.min.css';
 
+@import './assets/shared-style-classes/shared-sass-properties.scss';
 @import './assets/shared-style-classes/buttons.scss';
 
 @import './assets/color-palettes/main-colors.scss';
+@import './assets/shared-style-classes/font-sizes.scss';
 
 * {
     font-family: 'Montserrat', sans-serif;
