@@ -1,8 +1,15 @@
 <div class="content">
     <mat-toolbar>
         <mat-toolbar-row>
-            <span id="app-title">Simple Repository</span>
+            <span id="app-title" routerLink="/">Simple Repository</span>
             <span class="spacer"></span>
+            <div class="nav-type-button"
+                routerLink="/home"
+                routerLinkActive="nav-link-active">
+                <span>
+                    Main Page
+                </span>
+            </div>
             <div class="nav-type-button"
                 routerLink="/shop"
                 routerLinkActive="nav-link-active">
