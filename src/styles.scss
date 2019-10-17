@@ -37,13 +37,18 @@ body {
     transition: .2s ease-out;
 
     &:hover {
-        background-color: $flag-blue-dark;
-        border-left: 2px solid $flag-blue-dark;
+        background-color: $flag-blue-lightest;
+        border-left: 2px solid $flag-blue-lightest;
         transition: .2s ease-in;
         cursor: pointer;
+    }
+}
 
-        span {
-            color: $white;
-        }
+.nav-link-active {
+    background-color: $flag-blue-dark;
+    border-left: 2px solid $flag-blue-dark;
+
+    span {
+        color: $white;
     }
 }
