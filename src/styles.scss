@@ -30,3 +30,19 @@ body {
 .spacer {
     flex: 1 1 auto;
 }
+
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+::-webkit-scrollbar-track {
+    background: $light-medium-grey;
+}
+
+::-webkit-scrollbar-thumb {
+    background: $flag-blue-dark;
+
+    &:hover {
+        background: $flag-blue-lightest;
+    }
+}

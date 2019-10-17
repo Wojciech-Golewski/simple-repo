@@ -6,8 +6,8 @@
     height: 100%;
     padding: 0 20px;
     border-left: 2px solid $light-medium-grey;
-    transition: .2s ease-out;
     outline: none;
+    transition: .2s ease-out;
 
     &:hover {
         background-color: $flag-blue-lightest;
