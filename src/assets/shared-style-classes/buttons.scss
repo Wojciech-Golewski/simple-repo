@@ -1,0 +1,30 @@
+@import './assets/color-palettes/main-colors.scss';
+
+.nav-type-button {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 20px;
+    border-left: 2px solid $light-medium-grey;
+    transition: .2s ease-out;
+
+    &:hover {
+        background-color: $flag-blue-lightest;
+        border-left: 2px solid $flag-blue-lightest;
+        transition: .2s ease-in;
+        cursor: pointer;
+
+        span {
+            color: $black;
+        }
+    }
+}
+
+.nav-link-active {
+    background-color: $flag-blue-dark;
+    border-left: 2px solid $flag-blue-dark;
+
+    span {
+        color: $white;
+    }
+}
