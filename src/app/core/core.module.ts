@@ -5,6 +5,8 @@ import { MainPageComponent } from './components/main-page/main-page.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { SharedModule } from '../shared/shared.module';
 import { RouterModule } from '@angular/router';
+import { AboutUsComponent } from './components/about-us/about-us.component';
+import { ContactComponent } from './components/contact/contact.component';
 
 
 
@@ -13,7 +15,9 @@ import { RouterModule } from '@angular/router';
     HeaderComponent,
     FooterComponent,
     MainPageComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    AboutUsComponent,
+    ContactComponent
   ],
   imports: [
     SharedModule,
