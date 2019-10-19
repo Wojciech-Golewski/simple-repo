@@ -8,7 +8,7 @@ import { Component, HostListener } from '@angular/core';
 export class HeaderComponent {
 
   isMobile: boolean;
-  screenWidth: any;
+  screenWidth: number;
 
   constructor() {
     this.getScreenWidth();
