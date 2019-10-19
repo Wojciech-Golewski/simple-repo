@@ -1,6 +1,13 @@
 <div class="content">
     <div *ngIf="isMobile; else desktop" class="mobile">
-
+        <span id="app-title" routerLink="/">Simple Repository</span>
+        <span class="spacer"></span>
+        <div class="nav-type-button" (click)="showSideBarMenu()">
+            MENU
+        </div>
+    </div>
+    <div *ngIf="showSideBar" class="side-bar">
+        side bar
     </div>
     <ng-template #desktop>
         <div class="desktop">

@@ -1,6 +1,7 @@
 @import '../../../../assets/shared-style-classes/font-sizes.scss';
+@import '../../../../assets/color-palettes/main-colors.scss';
 
-.desktop {
+.mobile, .desktop {
     display: flex;
     align-items: center;
     height: 70px;
@@ -17,6 +18,10 @@
     }
 }
 
-.mat-toolbar-row {
-    padding: 0;
+.side-bar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    background-color: $white;
 }

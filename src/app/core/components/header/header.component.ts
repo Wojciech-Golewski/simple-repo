@@ -8,14 +8,10 @@ import { Component, HostListener } from '@angular/core';
 export class HeaderComponent {
 
   isMobile: boolean;
+  showSideBar: boolean = false;
   screenWidth: number;
 
-  constructor() {
-    this.getScreenWidth();
-  }
-
   @HostListener('window:resize', ['$event'])
-
   getScreenWidth(event?: any) {
     this.screenWidth = window.innerWidth;
 
@@ -24,5 +20,13 @@ export class HeaderComponent {
     } else {
       this.isMobile = false;
     }
+  }
+
+  constructor() {
+    this.getScreenWidth();
+  }
+
+  showSideBarMenu() {
+    this.showSideBar = !this.showSideBar;
   }
 }
