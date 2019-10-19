@@ -1,5 +1,11 @@
 @import '../../../../assets/shared-style-classes/font-sizes.scss';
 
+.desktop {
+    display: flex;
+    align-items: center;
+    height: 70px;
+}
+
 #app-title {
     font-weight: 400;
     font-size: $main-big-font;

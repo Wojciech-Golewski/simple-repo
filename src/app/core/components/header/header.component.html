@@ -1,6 +1,9 @@
 <div class="content">
-    <mat-toolbar>
-        <mat-toolbar-row>
+    <div *ngIf="isMobile; else desktop" class="mobile">
+
+    </div>
+    <ng-template #desktop>
+        <div class="desktop">
             <span id="app-title" routerLink="/">Simple Repository</span>
             <span class="spacer"></span>
             <div class="nav-type-button"
@@ -31,6 +34,6 @@
                     Contact
                 </span>
             </div>
-        </mat-toolbar-row>
-    </mat-toolbar>
+        </div>
+    </ng-template>
 </div>

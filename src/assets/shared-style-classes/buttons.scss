@@ -10,6 +10,10 @@
     outline: none;
     transition: .2s ease-out;
 
+    span {
+        font-size: $main-standard-font;
+    }
+
     &:hover {
         background-color: $flag-blue-lightest;
         border-left: 2px solid $flag-blue-lightest;
@@ -17,7 +21,6 @@
         cursor: pointer;
 
         span {
-            font-size: $main-standard-font;
             color: $black;
         }
     }
