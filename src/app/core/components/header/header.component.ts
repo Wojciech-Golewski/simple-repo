@@ -19,6 +19,9 @@ export class HeaderComponent {
       this.isMobile = true;
     } else {
       this.isMobile = false;
+      if (this.showSideBar) {
+        this.showSideBar = false;
+      }
     }
   }
 
