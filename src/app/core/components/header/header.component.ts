@@ -1,5 +1,5 @@
 import { Component, HostListener, Renderer2, ViewChild, ElementRef } from '@angular/core';
-import { trigger, state, style, transition, animate } from '@angular/animations';
+import { trigger, style, transition, animate } from '@angular/animations';
 
 @Component({
   selector: 'app-header',
