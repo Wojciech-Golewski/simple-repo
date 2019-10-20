@@ -19,16 +19,27 @@
 }
 
 .side-bar {
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     height: 100%;
     background-color: $white;
     width: 200px;
+    z-index: 1;
 
     .profile-container {
         height: 70px;
         background-color: $flag-blue-dark;
         border-bottom: 3px solid $flag-blue-lightest;
     }
+}
+
+.blurred-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: $white-medium-transparent;
+    backdrop-filter: blur(5px);
 }
