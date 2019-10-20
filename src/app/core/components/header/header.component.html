@@ -1,6 +1,52 @@
 <div class="content">
-    <mat-toolbar>
-        <mat-toolbar-row>
+    <div *ngIf="isMobile; else desktop" class="mobile">
+        <span id="app-title" routerLink="/">Simple Repository</span>
+        <span class="spacer"></span>
+        <div #sideBarButton (click)="showSideBarMenu()"
+            class="nav-type-button">
+            MENU
+        </div>
+    </div>
+    <div #sideBar
+        *ngIf="showSideBar"
+        [@showHide]="showSideBar ? 'show' : 'hide'"
+        class="side-bar">
+        <div class="profile-container">
+
+        </div>
+        <div class="side-bar-buttons">
+            <div class="nav-type-button"
+                routerLink="/home"
+                routerLinkActive="nav-link-active">
+                <span>
+                    Main Page
+                </span>
+            </div>
+            <div class="nav-type-button"
+                routerLink="/shop"
+                routerLinkActive="nav-link-active">
+                <span>
+                    Shop
+                </span>
+            </div>
+            <div class="nav-type-button"
+                routerLink="/about-us"
+                routerLinkActive="nav-link-active">
+                <span>
+                    About Us
+                </span>
+            </div>
+            <div class="nav-type-button"
+                routerLink="/contact"
+                routerLinkActive="nav-link-active">
+                <span>
+                    Contact
+                </span>
+            </div>
+        </div>
+    </div>
+    <ng-template #desktop>
+        <div class="desktop">
             <span id="app-title" routerLink="/">Simple Repository</span>
             <span class="spacer"></span>
             <div class="nav-type-button"
@@ -31,6 +77,7 @@
                     Contact
                 </span>
             </div>
-        </mat-toolbar-row>
-    </mat-toolbar>
+        </div>
+    </ng-template>
 </div>
+<div *ngIf="showSideBar" class="blurred-background"></div>

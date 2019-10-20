@@ -17,6 +17,7 @@ html, body {
 
 body {
     margin: 0;
+    background-color: $light-medium-grey;
 }
 
 .page {
@@ -31,6 +32,10 @@ body {
 
 .spacer {
     flex: 1 1 auto;
+}
+
+img {
+    width: 100%;
 }
 
 ::-webkit-scrollbar {
