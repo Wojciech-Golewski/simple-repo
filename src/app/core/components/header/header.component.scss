@@ -24,4 +24,11 @@
     right: 0;
     height: 100%;
     background-color: $white;
+    width: 200px;
+
+    .profile-container {
+        height: 70px;
+        background-color: $flag-blue-dark;
+        border-bottom: 3px solid $flag-blue-lightest;
+    }
 }
