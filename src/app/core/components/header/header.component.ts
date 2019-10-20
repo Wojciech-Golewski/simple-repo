@@ -43,8 +43,10 @@ export class HeaderComponent {
   constructor(private renderer: Renderer2) {
     this.getScreenWidth();
     this.renderer.listen('window', 'click', (event: Event) => {
-      if (event.target !== this.sideBarButton.nativeElement && event.target !== this.sideBar.nativeElement) {
-        this.showSideBar = false;
+      if (this.isMobile && this.showSideBar) {
+        if (event.target !== this.sideBarButton.nativeElement && event.target !== this.sideBar.nativeElement) {
+          this.showSideBar = false;
+        }
       }
     })
   }
