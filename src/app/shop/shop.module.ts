@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 
 import { ShopRoutingModule } from './shop-routing.module';
 import { MainTableComponent } from './components/main-table/main-table.component';
 import { ShopMainComponent } from './components/shop-main/shop-main.component';
+import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({
@@ -12,8 +12,8 @@ import { ShopMainComponent } from './components/shop-main/shop-main.component';
     ShopMainComponent
   ],
   imports: [
-    CommonModule,
-    ShopRoutingModule
+    ShopRoutingModule,
+    SharedModule
   ]
 })
 export class ShopModule { }
