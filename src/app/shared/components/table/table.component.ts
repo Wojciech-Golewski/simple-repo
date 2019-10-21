@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { SoftwareService } from 'src/app/shop/services/software.service';
+import { Software } from 'src/app/shop/models/software.model';
 
 @Component({
   selector: 'app-table',
@@ -7,9 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TableComponent implements OnInit {
 
-  constructor() { }
+  softwareData: Software[];
+
+  constructor(private softwareService: SoftwareService) { }
 
   ngOnInit() {
-  }
+    this.softwareService.getAllData().subscribe(data => {
+      this.softwareData = data;
+    },
+    (error) => {
 
+    },
+    () => {
+      
+    })
+  }
 }
