@@ -10,6 +10,7 @@ import { Software } from 'src/app/shop/models/software.model';
 export class TableComponent implements OnInit {
 
   softwareData: Software[];
+  headers: string[] = ['Name', 'Type', 'Description', 'Module Strength', 'Cost'];
 
   constructor(private softwareService: SoftwareService) { }
 
@@ -21,7 +22,7 @@ export class TableComponent implements OnInit {
 
     },
     () => {
-      
+
     })
   }
 }

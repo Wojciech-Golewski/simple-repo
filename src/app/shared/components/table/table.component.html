@@ -1,10 +1,24 @@
 <div class="table">
     <table>
         <tr>
-            <th>heading</th>
+            <th *ngFor="let header of headers">{{header}}</th>
         </tr>
-        <tr>
-            <td>data</td>
+        <tr *ngFor="let cell of softwareData">
+            <td>
+                {{cell.name}}
+            </td>
+            <td>
+                {{cell.type}}
+            </td>
+            <td>
+                {{cell.description}}
+            </td>
+            <td>
+                {{cell.moduleStrength}}
+            </td>
+            <td>
+                {{cell.cost}}
+            </td>
         </tr>
     </table>
 </div>
