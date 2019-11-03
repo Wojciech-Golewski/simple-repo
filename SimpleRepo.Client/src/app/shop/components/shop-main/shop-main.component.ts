@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ShopService } from '../../services/shop.service';
 
 @Component({
   selector: 'app-shop-main',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ShopMainComponent implements OnInit {
 
-  constructor() { }
+  data: ShopItem[];
+
+  constructor(private shopService: ShopService) { }
 
   ngOnInit() {
+    this.shopService.getAllData().subscribe(data => {
+      this.data = data;
+    })
   }
 
+}
+
+export interface ShopItem {
+  name: string;
+  price: number;
 }
