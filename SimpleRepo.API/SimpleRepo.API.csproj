@@ -5,6 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\SimpleRepo.Repositories\SimpleRepo.Repositories.csproj" />
+    <ProjectReference Include="..\SimpleRepo.Services\SimpleRepo.Services.csproj" />
   </ItemGroup>
 
 </Project>
