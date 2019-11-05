@@ -4,7 +4,10 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using SimpleRepo.Repositories;
 using SimpleRepo.Repositories.Data;
+using SimpleRepo.Services.Mappings;
+using SimpleRepo.Services.Services;
 
 namespace SimpleRepo.API
 {
@@ -32,6 +35,10 @@ namespace SimpleRepo.API
             });
             services.AddDbContext<ShopContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("ShopContext")));
+
+            services.AddTransient<IShopService, ShopService>();
+            services.AddTransient<IShopRepository, ShopRepository>();
+            services.AddTransient<DataMapper>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
