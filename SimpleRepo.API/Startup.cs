@@ -5,7 +5,6 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using SimpleRepo.Repositories.Data;
-using SimpleRepo.Services.Services;
 
 namespace SimpleRepo.API
 {
