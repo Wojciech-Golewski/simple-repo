@@ -1,15 +1,13 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
+using SimpleRepo.Repositories;
+using SimpleRepo.Repositories.Data;
+using SimpleRepo.Services.Mappings;
+using SimpleRepo.Services.Services;
 
 namespace SimpleRepo.API
 {
@@ -35,6 +33,12 @@ namespace SimpleRepo.API
                         .AllowAnyHeader();
                 });
             });
+            services.AddDbContext<ShopContext>(options =>
+                options.UseSqlServer(Configuration.GetConnectionString("ShopContext")));
+
+            services.AddTransient<IShopService, ShopService>();
+            services.AddTransient<IShopRepository, ShopRepository>();
+            services.AddTransient<DataMapper>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
