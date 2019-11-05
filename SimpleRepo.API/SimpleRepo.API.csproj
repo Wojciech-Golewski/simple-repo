@@ -2,10 +2,12 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.0</TargetFramework>
+    <StartupObject></StartupObject>
+    <ApplicationIcon />
+    <OutputType>Library</OutputType>
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\SimpleRepo.Repositories\SimpleRepo.Repositories.csproj" />
     <ProjectReference Include="..\SimpleRepo.Services\SimpleRepo.Services.csproj" />
   </ItemGroup>
 

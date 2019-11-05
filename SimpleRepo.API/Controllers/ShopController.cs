@@ -1,5 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using SimpleRepo.Services.DTO;
+using SimpleRepo.Services.Services;
+using System.Collections.Generic;
 
 namespace SimpleRepo.API.Controllers
 {
@@ -7,18 +10,19 @@ namespace SimpleRepo.API.Controllers
     [Route("api/[controller]")]
     public class ShopController : ControllerBase
     {
+        private readonly IShopService _shopService;
         private readonly ILogger<ShopController> _logger;
-        private static readonly ShopItem ShopData = new ShopItem("Item One", 25);
 
-        public ShopController(ILogger<ShopController> logger)
+        public ShopController(IShopService shopService, ILogger<ShopController> logger)
         {
+            _shopService = shopService;
             _logger = logger;
         }
 
         [HttpGet]
-        public ShopItem Get()
+        public IEnumerable<ShopItemDTO> Get()
         {
-            return ShopData;
+            return _shopService.GetAllShopItems();
         }
     }
 }

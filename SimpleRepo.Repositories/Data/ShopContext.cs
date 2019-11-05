@@ -10,7 +10,6 @@ namespace SimpleRepo.Repositories.Data
     {
         public ShopContext(DbContextOptions<ShopContext> options) : base(options)
         {
-
         }
 
         public DbSet<ShopItem> ShopItems { get; set; }
