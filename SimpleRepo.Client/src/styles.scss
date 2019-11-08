@@ -21,12 +21,25 @@ body {
 }
 
 .page {
+    display: flex;
+    flex-flow: column;
+    height: 100%;
     min-height: 1300px;
     background-color: $light-medium-grey;
 }
 
+.page-content-main {
+    height: 90%;
+    width: 90%;
+    margin: 3% auto auto;
+}
+
 .content {
-    min-height: 50px;
+    height: 100%;
+    background-color: $white;
+}
+
+.element-content {
     background-color: $white;
 }
 
