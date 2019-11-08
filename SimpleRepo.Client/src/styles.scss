@@ -23,24 +23,25 @@ body {
 .page {
     display: flex;
     flex-flow: column;
-    height: 100%;
-    min-height: 1300px;
     background-color: $light-medium-grey;
 }
 
 .page-content-main {
     height: 90%;
     width: 90%;
-    margin: 3% auto auto;
+    margin: 3% auto 5%;
 }
 
 .content {
-    height: 100%;
     background-color: $white;
 }
 
 .element-content {
     background-color: $white;
+}
+
+.text-container {
+    padding: 4vw;
 }
 
 .spacer {
